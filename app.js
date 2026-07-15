@@ -1,3 +1,12 @@
-const name = "Bacha"
+import express from "express";
 
-console.log(name)
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('  Wellcome to the subscription Tracker API!')
+})
+app.listen(3000, () => {
+    console.log(`Subscription Tracker API is running on  http://localhost:3000`)
+})
+
+export default app;
