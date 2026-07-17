@@ -12,11 +12,7 @@ const connectToDatabase = async () => {
         console.log(`successfully connected to database in ${NODE_ENV} mode`)
 
     } catch (error) {
-        console.log('error connecting to database', error)
-
-        process.exit(1);
-
-
+        console.error('error connecting to database:', error.message)
     }
 
 
